@@ -29,7 +29,10 @@ namespace UnicamCompleanno
                     differenzaTemporale = dataProssimoCompleanno - DateTime.Today;
                     differenzaInGiorni = differenzaTemporale.TotalDays;
                 }
-                Console.WriteLine($"Restano {differenzaInGiorni} giorni al tuo prossimo compleanno!");
+                if(differenzaInGiorni == 0)
+                    Console.WriteLine("Tanti Auguri!");
+                else
+                    Console.WriteLine($"Restano {differenzaInGiorni} giorni al tuo prossimo compleanno!");
 
             } catch (Exception exc) {
                 Console.WriteLine($"Non hai digitato una data valida, il programma ora terminera'. L'errore e' stato: {exc.Message}.");
